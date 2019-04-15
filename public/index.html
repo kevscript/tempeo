@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="leaflet.css">
+  <link rel="stylesheet" href="main.css">
+  <title>Tempeo</title>
+</head>
+<body>
+
+  <div class="container">
+    <div id="map"></div>
+    <div class="content">
+        <div class="content-header">
+          <h1>Tempeo</h1>
+          <p>Chose a location on the map to display weather informations.</p>
+        </div>
+        <div class="content-search">
+          <input type="text" name="places" id="places-input" class="search-input"/>
+        </div>
+        <div class="content-weather">
+        </div>
+        <div class="content-footer">
+          <p>Map <a href="https://leafletjs.com/" target="_blank">Leafletjs</a> / Weather <a href="https://openweathermap.org/" target="_blank">OpenWeatherMap</a> / Autocomplete <a href="https://www.algolia.com/" target="_blank">Algolia</a></p>
+          
+        </div>
+      </div>
+  </div>
+  <script src="keys.js"></script>
+  <script src="places.min.js"></script>
+  <script src="leaflet.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
+

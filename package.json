@@ -1,0 +1,19 @@
+{
+  "name": "tempeo",
+  "version": "1.0.0",
+  "description": "weather app",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "author": "kevscript",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4",
+    "node-fetch": "^2.3.0",
+    "places.js": "^1.15.5"
+  }
+}
