@@ -21,7 +21,7 @@ The main goal was to combine multiple APIs inside the same project.
 `OWM_API_KEY=YOUR_KEY`
     
 - create a `keys.js` file inside the public folder
-- inside, create a config object and pass your Agolia keys:
+- inside, create a config object and pass your Algolia keys:
    
 
       const config = {
