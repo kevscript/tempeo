@@ -1,3 +1,6 @@
+## 1. About
+
+
 Tempeo is a weather app I've built with JS for educational purposes.
 [Live Demo here](https://tempeo.herokuapp.com/)
 
@@ -10,7 +13,7 @@ It uses 3 APIs :
 
 The main goal was to combine multiple APIs inside the same project.
 
-## 1. Installation
+## 2. Installation
 
   
 
@@ -35,7 +38,7 @@ The main goal was to combine multiple APIs inside the same project.
   
   
 
-## 2. Usage
+## 3. Usage
 
 - To run it on your local machine `npm run start`  or `yarn start`
 
