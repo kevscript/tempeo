@@ -1,5 +1,7 @@
 Tempeo is a weather app I've built with JS for educational purposes.
 
+![](tempeo.gif)
+
 It uses 3 APIs :
 - [Leaflet.js](https://github.com/Leaflet/Leaflet), provides us with an interactive map
 - [OpenWeatherMap](https://openweathermap.org/), serves the weather data
