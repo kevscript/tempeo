@@ -1,9 +1,9 @@
 Tempeo is a weather app I've built with JS for educational purposes.
 
 It uses 3 APIs :
-- Leaflet.js, provides us with an interactive map
-- OpenWeatherMap, serves the weather data
-- Algolia Places, which is an address autocomplete API
+- [Leaflet.js](https://github.com/Leaflet/Leaflet), provides us with an interactive map
+- [OpenWeatherMap](https://openweathermap.org/), serves the weather data
+- [Algolia Places](https://github.com/algolia/places), which is an address autocomplete API
 
 The main goal was to combine multiple APIs inside the same project.
 
