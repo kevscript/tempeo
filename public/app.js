@@ -110,7 +110,7 @@ function showMapCoord(lat, lng) {
 }
 
 
-fetchWeatherByCoords = (lat, lng) => {
+function fetchWeatherByCoords(lat, lng) {
   fetch(`/api/owm/${lat}/${lng}`)
   .then(res => res.json())
   .then(data =>  {
