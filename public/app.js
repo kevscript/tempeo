@@ -4,8 +4,8 @@ const placesInput = document.getElementById("places-input");
 
 // Algolia autocomplete
 const placesAutocomplete = places({
-  appId: config.appId,
-  apiKey: config.apiKey,
+  appId: process.env.APP_ID, // config.appId
+  apiKey: process.env.API_KEY, // config.apiKey
   container: document.querySelector("#places-input"),
   language: "en",
   aroundLatLngViaIP: false
