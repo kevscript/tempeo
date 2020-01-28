@@ -28,45 +28,86 @@ L.tileLayer("https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png", {
 // print data
 function showData(data) {
   contentWeather.textContent = "";
-  const div = document.createElement("div");
-  contentWeather.appendChild(div);
+  const ul = document.createElement("ul");
+  contentWeather.appendChild(ul);
 
-  div.outerHTML = `<div class="content-weather">
-  <li>
-    <div class="weather-graph">
-      <div>
-        <img src="./images/${data.weather[0].icon || ""}.svg"/>
-      </div>
-      <span>${Math.round(data.main.temp) || ""}°C</span>
-    </div>
-    <h5>Weather</h5>
-    ${data.weather[0].description || ""}
-  </li>
-  <li>
-    <h5>Location</h5>
-    ${data.name || ""}, ${data.sys.country || ""}
-  </li>
-  <li>
-    <h5>Wind Speed</h5>
-    ${parseInt(data.wind.speed * 3) || ""} km/h
-  </li>
-  <li>
-    <h5>Humidity</h5>
-    ${data.main.humidity || ""} %
-  </li>
-  <li>
-    <h5>Pressure</h5>
-    ${data.main.pressure || ""} atm
-  </li>
-  <li>
-    <h5>Sunrise</h5>
-    ${new Date(data.sys.sunrise * 1000).toTimeString().substring(0, 8)}
-  </li>
-  <li>
-    <h5>Sunset</h5>
-    ${new Date(data.sys.sunset * 1000).toTimeString().substring(0, 8)}
-  </li>
-</div>`;
+  if(!data) {
+    ul.outerHTML = `
+    <ul class="content-weather">
+      <li>
+        <div class="weather-graph">
+          <div>
+            <img src="" alt="nothing"/>
+          </div>
+          <span>-°C</span>
+        </div>
+        <h5>Weather</h5>
+        no description
+      </li>
+      <li>
+        <h5>Location</h5>
+        -, -
+      </li>
+      <li>
+        <h5>Wind Speed</h5>
+       - km/h
+      </li>
+      <li>
+        <h5>Humidity</h5>
+        - %
+      </li>
+      <li>
+        <h5>Pressure</h5>
+        - atm
+      </li>
+      <li>
+        <h5>Sunrise</h5>
+        -
+      </li>
+      <li>
+        <h5>Sunset</h5>
+        -
+      </li>
+    </ul>`
+  } else {
+    ul.outerHTML = `
+    <ul class="content-weather">
+      <li>
+        <div class="weather-graph">
+          <div class="weather-graph-img-container">
+            <img class="weather-graph-img" src="./images/${data.weather[0].icon}.svg" alt=${data.weather[0].description }/>
+          </div>
+          <span class="data-span">${Math.round(data.main.temp)}°C</span>
+        </div>
+        <h5>Weather</h5>
+        <span class="data-span">${data.weather[0].description}</span>
+      </li>
+      <li>
+        <h5>Location</h5>
+        <span class="data-span">${data.name}, ${data.sys.country}</span>
+      </li>
+      <li>
+        <h5>Wind Speed</h5>
+        <span class="data-span">${parseInt(data.wind.speed * 3)} km/h</span>
+      </li>
+      <li>
+        <h5>Humidity</h5>
+        <span class="data-span">${data.main.humidity} %</span>
+      </li>
+      <li>
+        <h5>Pressure</h5>
+        <span class="data-span">${data.main.pressure} atm</span>
+      </li>
+      <li>
+        <h5>Sunrise</h5>
+        <span class="data-span">${new Date(data.sys.sunrise * 1000).toTimeString().substring(0, 8)}</span>
+      </li>
+      <li>
+        <h5>Sunset</h5>
+        <span class="data-span">${new Date(data.sys.sunset * 1000).toTimeString().substring(0, 8)}</span>
+      </li>
+    </ul>`;
+  }
 }
 
 // get position of click to set a new marker and display position

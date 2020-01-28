@@ -31,14 +31,21 @@ body {
   border-right: 1px solid rgba(133, 133, 133, 0.8);
   padding: 2.5em 2.5em;
   color: #333;
-  font-size: 0.9vw;
+  font-size: 1em;
   transition: left 1s ease-in;
   z-index: 99;
   overflow-y: scroll;
 }
 
 .content-search {
+  display: flex;
+  flex-direction: column;
   height: 50px;
+}
+
+.content-search label {
+  display: flex;
+  flex-direction: column;
 }
 
 .content-weather {
@@ -47,12 +54,12 @@ body {
 
 .content-weather li {
   margin: 25px 0;
-  font-size: 1.2vw;
+  font-size: 1.2em;
   font-weight: 600;
 }
 
 .content-weather li h5 {
-  font-size: 0.8vw;
+  font-size: 0.8em;
   font-weight: 400;
   font-style: italic;
   color: rgb(51, 51, 51, 0.8);
@@ -61,7 +68,7 @@ body {
 .content-header h1 {
   font-weight: 400;
   font-style: italic;
-  font-size: 1.5vw;
+  font-size: 1.5em;
   color: #0252B0;
   margin-bottom: 5px;
 }
@@ -74,7 +81,7 @@ body {
 }
 
 .content-footer p {
-  font-size: 12px;
+  font-size: 0.8em;
 }
 
 .weather-graph {
@@ -85,21 +92,24 @@ body {
   overflow: hidden;
 }
 
-.weather-graph div {
-  width: 25%;
-}
-
 .weather-graph span {
-  font-size: 4vw;
+  font-size: 3.5em;
   color: #0252B0;
   font-style: italic;
 }
 
-.weather-graph img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
+.weather-graph-img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  overflow: hidden;
+}
+
+.weather-graph-img {
+  width: 100px;
+  margin-right: 20px;
+  animation: fadeInFromNone 0.5s ease-out;
 }
 
 
@@ -222,4 +232,19 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.5px;
   height: 40px;
+}
+
+
+.data-span {
+  animation: fadeInFromNone 0.5s ease-out;
+}
+
+@keyframes fadeInFromNone {
+  0% {
+      opacity: 0;
+  }
+
+  100% {
+      opacity: 1;
+  }
 }
